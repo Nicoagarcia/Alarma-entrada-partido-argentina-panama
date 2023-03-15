@@ -21,6 +21,8 @@ with sync_playwright() as playwright:
             print("\nHora: {}\nFlaquito, activa, se publicaron! sos bueno esperando! ahora apurate.\n".format(datetime.fromtimestamp(time.time())))
             playsound('PvZ Victory Jingle.mp3')
             messagebox.showinfo(message="La imagen tiene un link asociado!", title="ATENCION")
+            image = page.locator('xpath=/html/body/div[4]/div/div[2]/div/div/div/div[1]/div/a/img')
+            image.click()
             print(link)
             break
         else:
