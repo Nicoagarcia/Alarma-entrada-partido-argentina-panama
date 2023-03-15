@@ -1,8 +1,8 @@
-import time
 from datetime import datetime
-from tkinter import messagebox
-from playsound import playsound
 from playwright.sync_api import Playwright, sync_playwright
+from playsound import playsound
+import time
+from tkinter import messagebox
 
 def get_link(page):
     eventoArgentina = page.locator('xpath=/html/body/div[4]/div/div[2]/div/div/div/div[1]/div/a')
@@ -18,7 +18,7 @@ with sync_playwright() as playwright:
     while True:
         link = get_link(page)
         if link:
-            print("\nHora: {}\nFlaquito, activa, se publicaron! sos bueno esperando!\n".format(datetime.fromtimestamp(time.time())))
+            print("\nHora: {}\nFlaquito, activa, se publicaron! sos bueno esperando! ahora apurate.\n".format(datetime.fromtimestamp(time.time())))
             playsound('PvZ Victory Jingle.mp3')
             messagebox.showinfo(message="La imagen tiene un link asociado!", title="ATENCION")
             print(link)
