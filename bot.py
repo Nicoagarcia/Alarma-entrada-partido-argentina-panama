@@ -24,7 +24,7 @@ with sync_playwright() as playwright:
             print(link)
             break
         else:
-            print("\nHora: {}\nNunca vi a nadie, que espere tan bien las entradas como vos. pero sigue sin publicarse\n".format(datetime.fromtimestamp(time.time())))
+            print("\nHora: {}\n SOS BUENOOOO. Nunca vi a nadie, que espere tan bien las entradas como vos. pero sigue sin publicarse\n".format(datetime.fromtimestamp(time.time())))
             time.sleep(60)
 
     context.close()
